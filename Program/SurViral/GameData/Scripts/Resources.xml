@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+*******RESOURCES SCRIPT TO LEVEL************
+-----Remember that paths are relative to exe!--------------
+Remember that names have to be COHERENT in different XML file!
+-->
+
+<!--
+	EVERY GROUP OF RESOURCES TO LOAD IS DIVIDED IN LEVELS. THERE IS A LEVEL CALLED "COMMON" FOR COMMON
+    RESOURCES USED WIDELY OVER LEVELS // IMPORTANT \\ IT IS ALSO USED BY LEVEL EDITOR TO LOAD ASSETS FOR
+	LEVEL IN EDIT
+-->
+<Level Id = "Common">
+	<!-- Images to load / Leave empty if nothing is to be loaded, but section must exist -->
+	<!-- If no ColorKey values are provided, image is treated as RGBA, with alpha channel existent.... -->
+	<Images>
+		<StaticImage Id="ComputerGroundsTexture" Path ="..\GameData\Image\BackGroundTexture.png" />
+		<StaticImage Id="ComputerGroundsTexture2" Path ="..\GameData\Image\BackGroundTexture2.png" />
+		<StaticImage Id="ComputerGroundsTexture3" Path ="..\GameData\Image\BackGroundTexture3.png" />
+		<StaticImage Id="DataChunk" Path ="..\GameData\Image\DataChunk.png" />
+		<StaticImage Id="InmovableChunk" Path ="..\GameData\Image\InmovableChunk.png" />
+		<Animation Id="Virus" Path ="..\GameData\Image\Virus.xml" />
+		<StaticImage Id= "MouseCursor" Path ="..\GameData\Image\MouseCursor.png"/>
+		<StaticImage Id="StartMSG" Path ="..\GameData\Image\StartMSG.png"/>
+		<StaticImage Id= "Tutorial" Path ="..\GameData\Image\Tutorial.png" />
+		<StaticImage Id= "ScannerLine" Path ="..\GameData\Image\ScannerLine.png"/>
+		<StaticImage Id="Laser" Path ="..\GameData\Image\Laser.png" />
+		<StaticImage Id= "CreditsLetters" Path ="..\GameData\Image\Credits_Letters.png"/>
+		<StaticImage Id= "CriticalSection" Path ="..\GameData\Image\CriticalSection.png" />
+	</Images>
+
+    <!-- Fonts to load / Leave empty if nothing is to be loaded, but section must exist -->
+	<Fonts>
+		 <Font Id = "GenSmall" ImagePath = "..\GameData\Image\Font\font_small.png" ConfigPath = "..\GameData\Image\Font\font_small.xml"/>
+		 <Font Id = "GenBig" ImagePath = "..\GameData\Image\Font\font_big.png" ConfigPath = "..\GameData\Image\Font\font_big.xml"/>
+		 <Font Id = "MainFont" ImagePath = "..\GameData\Image\Font\MainFont.tga" ConfigPath = "..\GameData\Image\Font\MainFont.xml"/>
+		 <Font Id = "ArcadeFont" ImagePath = "..\GameData\Image\Font\ArcadeFont.tga" ConfigPath = "..\GameData\Image\Font\ArcadeFont.xml"/>
+    </Fonts>
+
+   <!-- Sounds to load / Leave empty if nothing is to be loaded, but section must exist -->
+   <Audio>
+	    <!-- FX will be loaded fully in memory when played - ONLY WAV SUPPORTED-->
+		<FX Id = "Blip" Path = "..\GameData\Audio\35682__jobro__Laser5.wav" />
+		<FX Id = "BlipBounce" Path = "..\GameData\Audio\3062__SpeedY__bleep.wav" />
+		<FX Id = "BlipBounce2" Path = "..\GameData\Audio\73560__StaneStane__blip.wav" />
+		<FX Id = "BlipBounce3" Path = "..\GameData\Audio\38495__Corsica_S__blip07.wav" />
+		<FX Id = "TerminateVirus" Path = "..\GameData\Audio\33485__CosmicD__004.wav" />		
+ 		<FX Id = "DataCorrupted" Path = "..\GameData\Audio\38503__Corsica_S__blip15.wav" />
+		<FX Id = "NewVirus" Path = "..\GameData\Audio\NewVirus.wav" />
+		<FX Id = "LevelStart" Path = "..\GameData\Audio\31994__ProCynic__Pcyc_synthTop_moveup.wav" />
+ 		<!-- Music will be streamed and decoded directly  - ONLY OGG SUPPORTED-->
+		<Music Id = "LevelMusic" Path = "..\GameData\Audio\Atom_Wrath_-_A_short_bound.ogg" />
+		<Music Id = "LevelComplete" Path = "..\GameData\Audio\45724__torn.rugged.audio.35__atari_mono_02.ogg" />
+		<Music Id = "Scanning" Path = "..\GameData\Audio\Scanning.ogg" />
+   </Audio>
+</Level>
+
+<Level Id = "Level1">
+	<!-- Images to load / Leave empty if nothing is to be loaded, but section must exist  -->
+	<Images>
+	</Images>
+
+    <!-- Fonts to load / Leave empty if nothing is to be loaded, but section must exist -->
+	<Fonts>
+    </Fonts>
+
+   <!-- Sounds to load / Leave empty if nothing is to be loaded, but section must exist -->
+   <Audio>
+   </Audio>
+</Level>
+
+<Level Id = "Level2">
+	<!-- Images to load / Leave empty if nothing is to be loaded, but section must exist  -->
+	<Images>
+	</Images>
+
+    <!-- Fonts to load / Leave empty if nothing is to be loaded, but section must exist -->
+	<Fonts>
+    </Fonts>
+
+   <!-- Sounds to load / Leave empty if nothing is to be loaded, but section must exist -->
+   <Audio>
+   </Audio>
+</Level>
+
+<Level Id = "Level3">
+	<!-- Images to load / Leave empty if nothing is to be loaded, but section must exist  -->
+	<Images>
+	</Images>
+
+    <!-- Fonts to load / Leave empty if nothing is to be loaded, but section must exist -->
+	<Fonts>
+    </Fonts>
+
+   <!-- Sounds to load / Leave empty if nothing is to be loaded, but section must exist -->
+   <Audio>
+   </Audio>
+</Level>

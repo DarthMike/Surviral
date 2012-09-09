@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+*******GENERAL SETTINGS FOR APPLICATION************
+-----Remember that paths are relative to exe!--------------
+-->
+<!-- Graphics settings -->
+<GFX
+	ResX = "800"
+	ResY = "600"
+	Fullscreen = "0"
+	VSync = "0"
+ />
+
+<!-- Physics settings -->
+<!-- Important: UnitScaling refers how much pixels of screen is 1 meter  -->
+<!-- Important: Timestep for physical simulation is: 1 / TimeStepInv  -->
+<Physics
+	TimeStepInv = "80"
+	Iterations = "10"
+	GravityX = "0"
+	GravityY = "0"
+	AABBxmax = "500"
+	AABBymax = "500"
+	AABBxmin = "-500"
+	AABBymin = "-500"
+	UnitScaling = "10"    
+ />
+
+
+

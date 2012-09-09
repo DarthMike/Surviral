@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+*******CONFIGURATION SCRIPT TO OVERLAY************
+-----Remember that paths are relative to exe!--------------
+Remember that names have to be COHERENT in different XML file!
+-->
+
+<!-- Entities definition -->
+<Entities>
+	<!-- Credits letters -->
+	<Sprite Id = "CreditsLetters" x = "0" y ="0" z = "1"  w = "80" h = "60" Rotation = "0" Transp = "255" FlipX = "0" FlipY = "0" Wrap = "0" WrapX = "0" WrapY = "0" Layer="63">
+			<Image Id = "CreditsLetters" />	
+	</Sprite>
+</Entities>

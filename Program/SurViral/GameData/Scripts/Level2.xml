@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Level />
+
+<Parallax MaxZoom="10" MinZoom="0.1" StartZoom="1.2">
+    <Layer Number="0" SpeedPercentX="20" SpeedPercentY="20" ZoomPercent="50" StartPosX="0" StartPosY="0" />
+	<Layer Number="1" SpeedPercentX="50" SpeedPercentY="50" ZoomPercent="80" StartPosX="0" StartPosY="0" />
+	<Layer Number="2" SpeedPercentX="100" SpeedPercentY="100" ZoomPercent="100" StartPosX="0" StartPosY="0" />
+</Parallax>
+
+<Entities>
+    <Sprite Id="BackGround"  x="-200" y="200" z="0" w="180" h="180" Rotation="0" Transp="220" FlipX="0" FlipY="0" Wrap = "1" WrapX = "1024" WrapY = "1024" Layer="0">
+        <Image Id="ComputerGroundsTexture" />
+	</Sprite>
+	<Sprite Id="BackGround2"  x="-200" y="200" z="0" w="180" h="180" Rotation="0" Transp="150" FlipX="0" FlipY="0" Wrap = "1" WrapX = "1024" WrapY = "1024" Layer="1">
+        <Image Id="ComputerGroundsTexture3" />
+	</Sprite>
+
+   <Sprite Id="BackGround3"  x="-200" y="200" z="0" w="80" h="80" Rotation="0" Transp="150" FlipX="0" FlipY="0" Wrap = "1" WrapX = "2048" WrapY = "2048" Layer="2">
+        <Image Id="ComputerGroundsTexture2" />
+	</Sprite>
+
+<Player MoveSpeed = "15" CollidedSpeed  = "1" ShootForce = "700" 
+                    ProjectileCollGroupIndex = "-2" ProjectileCollMaskBits  = "255" ProjectileCollCategoryBits ="3" ProjectileImageName = "Laser"
+                    ProjectileHeight = "0.8" ProjectileWidth = "0.8" ProjectileDensity = "10" ProjectileLifeTime = "0.5">
+	  <Body Id="PlayerBody" x="30" y="0" Rotation="0" LinDamping="0" AngDamping="0" IsStatic="0" FixedRotation = "1">
+        <PolygonShape Order="4" Density="5" Friction="1" Restitution="0" CollGroupIndex = "-2" CollCategoryBits ="3">
+					-1.5,-1.5,1.5,-1.5,1.5,1.5,-1.5,1.5
+		</PolygonShape>
+  		<CircleShape Radius="3.1" Density="1" Friction="0" Restitution="0"CollGroupIndex = "-2" CollCategoryBits ="3" Sensor = "1">0,0</CircleShape>
+    </Body>		
+        <Sprite Id="Virus" x="15" y="32" z="0" w="3" h="3" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            <Animation Id="Virus" />
+        </Sprite>
+		<SpawnAIDef  AI = "SpawnVirus" >
+	  		<Body Id="SpawnedVirusBody" x="15" y="3" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="0" FixedRotation = "1">
+        		<PolygonShape Order="4" Density="1" Friction="1" Restitution="0" CollGroupIndex = "-2" CollCategoryBits ="3">
+						-1,-1,1,-1,1,1,-1,1
+				</PolygonShape>
+			</Body>
+        	<Sprite Id="SpawnedVirus" x="15" y="32" z="0" w="2" h="2" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Animation Id="Virus" />
+        	</Sprite>
+   	 </SpawnAIDef>
+    </Player>
+	
+	<AntiVirusScanner ScanTime = "10000" MinSeparation = "4" MaxSeparation = "20" TrackConstant= "0.004">
+	    <Sprite Id="ScanLine1" x="0" y="0" z="0" w="0.5" h="60" Rotation="0" Transp="200" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="11">
+            <Image Id="ScannerLine" />
+        </Sprite>	 
+	    <Sprite Id="ScanLine2" x="0" y="0" z="0" w="0.5" h="60" Rotation="0" Transp="200" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="11">
+            <Image Id="ScannerLine" />
+        </Sprite>	 
+	    <Sprite Id="ScanLine3" x="0" y="0" z="0" w="0.5" h="60" Rotation="90" Transp="200" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="11">
+            <Image Id="ScannerLine" />
+        </Sprite>	 
+	    <Sprite Id="ScanLine4" x="0" y="0" z="0" w="0.5" h="60" Rotation="90" Transp="200" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="11">
+            <Image Id="ScannerLine" />
+        </Sprite>	
+	    <Sprite Id="ScanText" x="0" y="0" z="0" w="5" h="5" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="11">
+            <Font Id="GenSmall" LineSpacing ="14" CharSpacing = "0" Align = "Left"/>
+        </Sprite>	  
+	</AntiVirusScanner>
+
+<!-- Objective: Critical Section -->
+  <AIAgent AI = "CriticalSection" >
+	  <Body Id="CriticalSection1" x="40" y="0" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="0" FixedRotation = "0">
+        <PolygonShape Order="4" Density="200" Friction="1" Restitution="0" CollCategoryBits ="2">
+				-4,-4,4,-4,4,4,-4,4
+		</PolygonShape>
+	</Body>
+        <Sprite Id="CriticalSection1" x="20" y="20" z="0" w="8" h="8" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            <Image Id="CriticalSection" />
+        </Sprite>
+    </AIAgent>
+
+<!-- World Limits -->
+	<BodyAgent Id = "Limit1" Material ="">  
+		<Body Id="Limit1" x="0" y="50" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollGroupIndex = "-1" CollCategoryBits ="1">
+					-60,-5,60,-5,60,5,-60,5
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inmovable1" x="0" y="50" z="0" w="120" h="10" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+
+	<BodyAgent Id = "Limit2" Material ="">  
+		<Body Id="Limit2" x="0" y="-50" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollGroupIndex = "-1"  CollCategoryBits ="1">
+					-60,-5,60,-5,60,5,-60,5
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inmovable2" x="0" y="-50" z="0" w="120" h="10" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+
+	<BodyAgent Id = "Limit3" Material ="">  
+		<Body Id="Limit3" x="-50" y="0" Rotation="90" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollGroupIndex = "-1" CollCategoryBits ="1">
+					-60,-5,60,-5,60,5,-60,5
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inmovable3" x="-50" y="0"  z="0" w="120" h="10" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+
+	<BodyAgent Id = "Limit4" Material ="">  
+		<Body Id="Limit4" x="50" y="0" Rotation="90" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollGroupIndex = "-1"  CollCategoryBits ="1">
+					-60,-5,60,-5,60,5,-60,5
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inmovable4" x="50" y="0" z="0" w="120" h="10" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+
+<!-- Blocks -->
+  <AIAgent AI = "DataChunk" >
+	  <Body Id="DataChunk1" x="-0" y="0" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="0" FixedRotation = "0">
+        <PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="2">
+				-2,-2,2,-2,2,2,-2,2
+		</PolygonShape>
+	</Body>
+        <Sprite Id="DataChunk1" x="-10" y="-20" z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            <Image Id="DataChunk" />
+        </Sprite>
+    </AIAgent>
+
+  <AIAgent AI = "DataChunk" >
+	  <Body Id="DataChunk2" x="-40" y="35" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="0" FixedRotation = "0">
+        <PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="2">
+				-2,-2,2,-2,2,2,-2,2
+		</PolygonShape>
+	</Body>
+        <Sprite Id="DataChunk2" x="-10" y="-20" z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            <Image Id="DataChunk" />
+        </Sprite>
+    </AIAgent>
+
+  <AIAgent AI = "DataChunk" >
+	  <Body Id="DataChunk3" x="-40" y="30" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="0" FixedRotation = "0">
+        <PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="2">
+				-2,-2,2,-2,2,2,-2,2
+		</PolygonShape>
+	</Body>
+        <Sprite Id="DataChunk3" x="-10" y="-20" z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            <Image Id="DataChunk" />
+        </Sprite>
+    </AIAgent>
+
+	<BodyAgent Id = "Inm1" Material ="">  
+		<Body Id="Inm1" x="10" y="0" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm1" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm2" Material ="">  
+		<Body Id="Inm2" x="10" y="4" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm2" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm3" Material ="">  
+		<Body Id="Inm3" x="10" y="9" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm3" x="10" y="13"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm4" Material ="">  
+		<Body Id="Inm4" x="10" y="17" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm4" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm5" Material ="">  
+		<Body Id="Inm5" x="10" y="21" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm5" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm6" Material ="">  
+		<Body Id="Inm6" x="10" y="25" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm6" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm7" Material ="">  
+		<Body Id="Inm7" x="10" y="30" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm7" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm8" Material ="">  
+		<Body Id="Inm8" x="10" y="34" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm8" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm9" Material ="">  
+		<Body Id="Inm9" x="10" y="38" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm9" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm10" Material ="">  
+		<Body Id="Inm10" x="10" y="42" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm10" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm11" Material ="">  
+		<Body Id="Inm11" x="10" y="-4" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm11" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm12" Material ="">  
+		<Body Id="Inm12" x="10" y="-8" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm12" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm13" Material ="">  
+		<Body Id="Inm13" x="10" y="-12" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm13" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm14" Material ="">  
+		<Body Id="Inm14" x="10" y="-12" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm14" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm15" Material ="">  
+		<Body Id="Inm15" x="10" y="-16" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm15" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm16" Material ="">  
+		<Body Id="Inm16" x="10" y="-20" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm16" x="10" y="0"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm17" Material ="">  
+		<Body Id="Inm17" x="-20" y="-10" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-5,-1,5,-1,5,1,-5,1
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm17" x="10" y="0"  z="0" w="10" h="2" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm18" Material ="">  
+		<Body Id="Inm18" x="-25" y="-30" Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-8,-2,8,-2,8,2,-8,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm18" x="-25" y="-20"  z="0" w="16" h="4" Rotation="90" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+
+	<BodyAgent Id = "Inm19" Material ="">  
+		<Body Id="Inm19" x="-10" y="-30"  Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm19" x="-10" y="-30"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm20" Material ="">  
+		<Body Id="Inm20" x="-15" y="-30"  Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm20" x="-15" y="-30"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+
+	<BodyAgent Id = "Inm21" Material ="">  
+		<Body Id="Inm21" x="-15" y="30"  Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm21" x="-15" y="30"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+	<BodyAgent Id = "Inm22" Material ="">  
+		<Body Id="Inm22" x="-25" y="28"  Rotation="0" LinDamping="0.9" AngDamping="0.9" IsStatic="1" FixedRotation = "0">
+       		<PolygonShape Order="4" Density="100" Friction="1" Restitution="0" CollCategoryBits ="1">
+					-2,-2,2,-2,2,2,-2,2
+			</PolygonShape>
+		</Body> 
+		<Sprite Id="Inm22" x="-25" y="28"  z="0" w="4" h="4" Rotation="0" Transp="255" FlipX="0" FlipY="0" Wrap="0" WrapX="0" WrapY="0" Layer="10">
+            	<Image Id="InmovableChunk" />
+        </Sprite>
+	</BodyAgent>
+</Entities>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<audacityproject projname="38503__Corsica_S__blip15_data" version="1.1.0" audacityversion="1.2.6" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="862.1670563828" rate="44100.000000" >
+	<tags title="" artist="" album="" track="-1" year="" genre="-1" comments="" id3v2="1" />
+	<wavetrack name="38503__Corsica_S__blip15" channel="0" linked="1" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="56879" >
+			<waveblock start="0" >
+				<pcmaliasblockfile summaryfile='b00004.auf' aliasfile='I:\PERSONAL\Game programming\Projects\10Seconds-EGP\Program\SurViral\GameData\Audio\38503__Corsica_S__blip15.wav' aliasstart='0' aliaslen='56879' aliaschannel='0' min='-0.883484' max='0.882355' rms='0.057947'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="38503__Corsica_S__blip15" channel="1" linked="0" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="56879" >
+			<waveblock start="0" >
+				<pcmaliasblockfile summaryfile='b00005.auf' aliasfile='I:\PERSONAL\Game programming\Projects\10Seconds-EGP\Program\SurViral\GameData\Audio\38503__Corsica_S__blip15.wav' aliasstart='0' aliaslen='56879' aliaschannel='1' min='-0.887665' max='0.886688' rms='0.058227'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="OpenALSettings"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="C:\Programming\OpenAL 1.1 SDK\include; C:\Programming\OpenAL 1.1 SDK\freealut-1.1.0-bin\include\AL"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="OpenAL32.lib alut.lib"
+		AdditionalLibraryDirectories="C:\Programming\OpenAL 1.1 SDK\libs\Win32; C:\Programming\OpenAL 1.1 SDK\freealut-1.1.0-bin\lib"
+	/>
+</VisualStudioPropertySheet>

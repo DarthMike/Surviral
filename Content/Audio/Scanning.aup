@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<audacityproject projname="Scanning_data" version="1.1.0" audacityversion="1.2.6" sel0="12.5435674318" sel1="12.5435674318" vpos="0" h="0.0000000000" zoom="79.8018590361" rate="44100.000000" >
+	<tags title="" artist="" album="" track="-1" year="" genre="-1" comments="" id3v2="1" />
+	<wavetrack name="Scanning" channel="0" linked="1" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="524288" sampleformat="131073" numsamples="504726" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00106.au' len='458121' min='-0.502251' max='0.527855' rms='0.083547'/>
+			</waveblock>
+			<waveblock start="458121" >
+				<simpleblockfile filename='b00104.au' len='46605' min='-0.402243' max='0.415488' rms='0.048494'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='37'>
+			<controlpoint t='1.140314311979' val='1.000000000000'/>
+			<controlpoint t='1.140324311979' val='1.000000000000'/>
+			<controlpoint t='2.064945162319' val='1.000000000000'/>
+			<controlpoint t='2.064950162319' val='1.000000000000'/>
+			<controlpoint t='2.340627963017' val='1.000000000000'/>
+			<controlpoint t='2.340632963017' val='1.000000000000'/>
+			<controlpoint t='3.150968099072' val='1.000000000000'/>
+			<controlpoint t='3.150973099072' val='1.000000000000'/>
+			<controlpoint t='3.514368154538' val='1.000000000000'/>
+			<controlpoint t='3.514373154538' val='1.000000000000'/>
+			<controlpoint t='4.279243437984' val='1.000000000000'/>
+			<controlpoint t='4.279248437984' val='1.000000000000'/>
+			<controlpoint t='4.692767639032' val='1.000000000000'/>
+			<controlpoint t='4.692772639032' val='1.000000000000'/>
+			<controlpoint t='5.581429770551' val='1.000000000000'/>
+			<controlpoint t='5.581434770551' val='1.000000000000'/>
+			<controlpoint t='5.857112571249' val='1.000000000000'/>
+			<controlpoint t='5.857117571249' val='1.000000000000'/>
+			<controlpoint t='6.748359736782' val='1.000000000000'/>
+			<controlpoint t='6.748364736782' val='1.000000000000'/>
+			<controlpoint t='7.024042537480' val='1.000000000000'/>
+			<controlpoint t='7.024047537480' val='1.000000000000'/>
+			<controlpoint t='7.914790836800' val='1.000000000000'/>
+			<controlpoint t='7.914795836800' val='1.000000000000'/>
+			<controlpoint t='8.253128819475' val='1.000000000000'/>
+			<controlpoint t='8.253133819475' val='1.000000000000'/>
+			<controlpoint t='9.335617114553' val='1.000000000000'/>
+			<controlpoint t='9.335622114553' val='1.000000000000'/>
+			<controlpoint t='9.360679187344' val='1.000000000000'/>
+			<controlpoint t='9.360684187344' val='1.000000000000'/>
+			<controlpoint t='10.285305037684' val='1.000000000000'/>
+			<controlpoint t='10.285310037684' val='1.000000000000'/>
+			<controlpoint t='10.297841074080' val='1.000000000000'/>
+			<controlpoint t='10.336504241586' val='1.000000000000'/>
+			<controlpoint t='10.336509241586' val='1.000000000000'/>
+			<controlpoint t='10.388224171765' val='1.000000000000'/>
+			<controlpoint t='10.388229171765' val='1.000000000000'/>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Scanning" channel="1" linked="0" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="524288" sampleformat="131073" numsamples="504726" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00107.au' len='458121' min='-0.511528' max='0.511376' rms='0.083818'/>
+			</waveblock>
+			<waveblock start="458121" >
+				<simpleblockfile filename='b00105.au' len='46605' min='-0.402274' max='0.401968' rms='0.048604'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='37'>
+			<controlpoint t='1.140314311979' val='1.000000000000'/>
+			<controlpoint t='1.140324311979' val='1.000000000000'/>
+			<controlpoint t='2.064945162319' val='1.000000000000'/>
+			<controlpoint t='2.064950162319' val='1.000000000000'/>
+			<controlpoint t='2.340627963017' val='1.000000000000'/>
+			<controlpoint t='2.340632963017' val='1.000000000000'/>
+			<controlpoint t='3.150968099072' val='1.000000000000'/>
+			<controlpoint t='3.150973099072' val='1.000000000000'/>
+			<controlpoint t='3.514368154538' val='1.000000000000'/>
+			<controlpoint t='3.514373154538' val='1.000000000000'/>
+			<controlpoint t='4.279243437984' val='1.000000000000'/>
+			<controlpoint t='4.279248437984' val='1.000000000000'/>
+			<controlpoint t='4.692767639032' val='1.000000000000'/>
+			<controlpoint t='4.692772639032' val='1.000000000000'/>
+			<controlpoint t='5.581429770551' val='1.000000000000'/>
+			<controlpoint t='5.581434770551' val='1.000000000000'/>
+			<controlpoint t='5.857112571249' val='1.000000000000'/>
+			<controlpoint t='5.857117571249' val='1.000000000000'/>
+			<controlpoint t='6.748359736782' val='1.000000000000'/>
+			<controlpoint t='6.748364736782' val='1.000000000000'/>
+			<controlpoint t='7.024042537480' val='1.000000000000'/>
+			<controlpoint t='7.024047537480' val='1.000000000000'/>
+			<controlpoint t='7.914790836800' val='1.000000000000'/>
+			<controlpoint t='7.914795836800' val='1.000000000000'/>
+			<controlpoint t='8.253128819475' val='1.000000000000'/>
+			<controlpoint t='8.253133819475' val='1.000000000000'/>
+			<controlpoint t='9.335617114553' val='1.000000000000'/>
+			<controlpoint t='9.335622114553' val='1.000000000000'/>
+			<controlpoint t='9.360679187344' val='1.000000000000'/>
+			<controlpoint t='9.360684187344' val='1.000000000000'/>
+			<controlpoint t='10.285305037684' val='1.000000000000'/>
+			<controlpoint t='10.285310037684' val='1.000000000000'/>
+			<controlpoint t='10.297841074080' val='1.000000000000'/>
+			<controlpoint t='10.336504241586' val='1.000000000000'/>
+			<controlpoint t='10.336509241586' val='1.000000000000'/>
+			<controlpoint t='10.388224171765' val='1.000000000000'/>
+			<controlpoint t='10.388229171765' val='1.000000000000'/>
+		</envelope>
+	</wavetrack>
+</audacityproject>

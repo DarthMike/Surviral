@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<audacityproject projname="45724__torn.rugged.audio.35__atari_mono_02_data" version="1.1.0" audacityversion="1.2.6" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="183.6289018034" rate="44100.000000" >
+	<tags title="" artist="" album="" track="-1" year="" genre="-1" comments="" id3v2="1" />
+	<wavetrack name="45724__torn.rugged.audio.35__atari_mono_02" channel="2" linked="0" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="267056" >
+			<waveblock start="0" >
+				<pcmaliasblockfile summaryfile='b00000.auf' aliasfile='I:\PERSONAL\Game programming\Resources\Sounds\SURVIRAL\45724__torn.rugged.audio.35__atari_mono_02.wav' aliasstart='0' aliaslen='262144' aliaschannel='0' min='-0.678295' max='0.359636' rms='0.139758'/>
+			</waveblock>
+			<waveblock start="262144" >
+				<pcmaliasblockfile summaryfile='b00001.auf' aliasfile='I:\PERSONAL\Game programming\Resources\Sounds\SURVIRAL\45724__torn.rugged.audio.35__atari_mono_02.wav' aliasstart='262144' aliaslen='4912' aliaschannel='0' min='0.000000' max='0.000000' rms='0.000000'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>

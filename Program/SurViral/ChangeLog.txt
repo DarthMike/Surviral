@@ -1,0 +1,11 @@
+------------CHANGELOG-----------------------------------------
+	0.1: INITIAL TESTS AND PROJECT SETUP
+	0.1.5: TOP-DOWN MOVEMENT WITH BOX2D
+	0.2: FIRST PLAYTESTS LOGIC
+	0.3: PROGRAM DEBUG AND FURTHER PLAYTESTS
+	0.4: FIRST PROTOTYPE FOR GAME. ALL ELEMENTS ADDED, MENUS, GFX AND SOUNDS. BUG FIXES
+	
+	
+---------------------------------------------------------------
+CURRENT VERSION: 0.4
+

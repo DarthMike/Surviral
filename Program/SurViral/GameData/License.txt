@@ -1,0 +1,27 @@
+----------AUDIO FX-----------:
+All audio FX used in the game are property of the respective authors.
+All files are freely available at http://www.freesound.org
+
+Files used:
+From: SpeedY
+http://www.freesound.org/samplesViewSingle.php?id=3062
+From: CosmicD
+http://www.freesound.org/samplesViewSingle.php?id=33485
+From: Corsica_S
+http://www.freesound.org/samplesViewSingle.php?id=38503
+http://www.freesound.org/samplesViewSingle.php?id=38498
+http://www.freesound.org/samplesViewSingle.php?id=38502
+http://www.freesound.org/samplesViewSingle.php?id=38495
+From: jobro
+http://www.freesound.org/samplesViewSingle.php?id=35682
+http://creativecommons.org/licenses/sampling+/1.0/
+From: StaneStane
+http://www.freesound.org/samplesViewSingle.php?id=73560
+From: torn.rugged.audio.35
+http://www.freesound.org/samplesViewSingle.php?id=45724
+
+-----------MUSIC-------------:
+The song "A short bound" is made by Atom Wrath:
+http://www.archive.org/details/wrath_the_heap
+under license Attribution-Noncommercial-No Derivative Works 2.0 Generic
+http://creativecommons.org/licenses/by-nc-nd/2.0/

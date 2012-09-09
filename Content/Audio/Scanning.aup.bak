@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<audacityproject projname="Scanning_data" version="1.1.0" audacityversion="1.2.6" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="79.8018590361" rate="44100.000000" >
+	<tags title="" artist="" album="" track="-1" year="" genre="-1" comments="" id3v2="1" />
+	<wavetrack name="Scanning" channel="0" linked="1" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="524288" sampleformat="131073" numsamples="614512" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00000.au' len='524288' min='-0.520592' max='0.529442' rms='0.093028'/>
+			</waveblock>
+			<waveblock start="524288" >
+				<simpleblockfile filename='b00002.au' len='90224' min='-0.518547' max='0.527886' rms='0.058958'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Scanning" channel="1" linked="0" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="524288" sampleformat="131073" numsamples="614512" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00001.au' len='524288' min='-0.536950' max='0.523339' rms='0.093328'/>
+			</waveblock>
+			<waveblock start="524288" >
+				<simpleblockfile filename='b00003.au' len='90224' min='-0.524254' max='0.524559' rms='0.059101'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>

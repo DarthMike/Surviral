@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<!-- frames declaration -->
+	<frames>	
+		<!-- Idle -->
+		<frame name ="Virus00" file= "..\GameData\Image\Virus\VirusIdle0000.png"collision="..\GameData\Image\Virus\Virus_collisions.xml"/>
+		<frame name ="Virus01" file= "..\GameData\Image\Virus\VirusIdle0001.png"collision="..\GameData\Image\Virus\Virus_collisions.xml"/>
+	</frames>
+		
+	<!-- sequences declaration -->
+	<sequences>
+		<!-- Virus -->
+		<sequence name="Idle00">
+			<frame name="Virus00"  time="800" />
+			<frame name="Virus01"  time="800" />
+		</sequence>						
+	</sequences>
+</animation>
